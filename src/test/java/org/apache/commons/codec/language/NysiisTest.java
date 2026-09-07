@@ -17,11 +17,11 @@
 
 package org.apache.commons.codec.language;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.apache.commons.codec.AbstractStringEncoderTest;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Tests {@link Nysiis}
@@ -137,7 +137,8 @@ class NysiisTest extends AbstractStringEncoderTest<Nysiis> {
                 // violates 6: if the last two characters are AY, remove A
                 new String[] { "CARRAWAY", "CARY" },       // Original: CARAY
                 new String[] { "YAMADA", "YANAD" },
-                new String[] { "ASH", "A"});
+                new String[] { "ASH", "A"},
+                new String[] { "SSH", "S"});
     }
 
     @Test
